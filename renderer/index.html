@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+        user-select: none;
+      }
+      .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        user-select: none;
+      }
+      #my-image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        user-select: none;
+      }
+
+      canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        user-select: none;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        user-select: none;
+      }
+    </style>
+    <title>Image Reactor</title>
+  </head>
+  <body id="imageBody">
+    <div class="imageContainer">
+      <img id="my-image" style="maxHeight=100%;maxWidth=100%;" />
+
+      <canvas id="myCanvas"></canvas>
+      <script src="./js/renderer.js"></script>
+
+      <script></script>
+    </div>
+  </body>
+</html>

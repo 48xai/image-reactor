@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hue Saturation Luminosity</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .sliders {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input[type="range"] {
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center text-center"
+    >
+      <!--    <img src="images/logo.png" alt="Image" style="width:360px">-->
+
+      <div class="flex flex-col">
+        <div class="flex items-center mb-4">
+          <div class="w-32">
+            <label for="hue" class="text-sm font-medium text-gray-700 mr-2"
+              >hue:</label
+            >
+          </div>
+          <div class="flex-grow">
+            <div class="relative">
+              <input
+                type="range"
+                id="hue"
+                name="hue"
+                min="-180"
+                max="180"
+                step="1"
+                value="50"
+                class="appearance-none w-full h-2 bg-gray-300 rounded-full outline-none"
+              />
+              <!--            <div class="absolute top-0 right-0 px-2 py-1 text-xs font-bold text-white bg-gray-600 rounded-full shadow">50</div>-->
+            </div>
+          </div>
+          <div class="w-20 ml-2">
+            <input
+              type="text"
+              id="hue-value"
+              name="hue-value"
+              size="4"
+              class="appearance-none w-full px-2 py-1 text-sm leading-tight text-gray-700 bg-white border border-gray-400 rounded-md shadow-sm outline-none focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center mb-4">
+          <div class="w-32">
+            <label
+              for="saturation"
+              class="text-sm font-medium text-gray-700 mr-2"
+              >saturation:</label
+            >
+          </div>
+          <div class="flex-grow">
+            <div class="relative">
+              <input
+                type="range"
+                id="saturation"
+                name="saturation"
+                min="0"
+                max="2"
+                step="0.01"
+                value="50"
+                class="appearance-none w-full h-2 bg-gray-300 rounded-full outline-none"
+              />
+              <!--            <div class="absolute top-0 right-0 px-2 py-1 text-xs font-bold text-white bg-gray-600 rounded-full shadow">50</div>-->
+            </div>
+          </div>
+          <div class="w-20 ml-2">
+            <input
+              type="text"
+              id="saturation-value"
+              name="saturation-value"
+              size="4"
+              class="appearance-none w-full px-2 py-1 text-sm leading-tight text-gray-700 bg-white border border-gray-400 rounded-md shadow-sm outline-none focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center mb-4">
+          <div class="w-32 items-center justify-center">
+            <label
+              for="luminosity"
+              class="text-sm font-medium text-gray-700 mr-2"
+              >luminosity:</label
+            >
+          </div>
+          <div class="flex-grow">
+            <div class="relative">
+              <input
+                type="range"
+                id="luminosity"
+                name="luminosity"
+                min="0"
+                max="2"
+                step="0.01"
+                value="50"
+                class="appearance-none w-full h-2 bg-gray-300 rounded-full outline-none"
+              />
+              <!--            <div class="absolute top-0 right-0 px-2 py-1 text-xs font-bold text-white bg-gray-600 rounded-full shadow">50</div>-->
+            </div>
+          </div>
+          <div class="w-20 ml-2">
+            <input
+              type="text"
+              id="luminosity-value"
+              name="luminosity-value"
+              size="4"
+              class="appearance-none w-full px-2 py-1 text-sm leading-tight text-gray-700 bg-white border border-gray-400 rounded-md shadow-sm outline-none focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <button
+          class="px-4 py-2 font-medium text-white bg-gray-600 rounded-full shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+          style="background-color: #666"
+          id="okButton"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/hslColors.js"></script>
+    <script></script>
+  </body>
+</html>
