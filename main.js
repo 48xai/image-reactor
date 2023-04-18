@@ -416,7 +416,7 @@ app.whenReady().then(() => {
 
   mainWindow.loadFile("renderer/index.html");
   if (isDev) {
-      mainWindow.webContents.openDevTools();
+      // mainWindow.webContents.openDevTools(); // uncomment to show the dev tools
   }
 });
 
